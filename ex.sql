@@ -11,3 +11,5 @@ CREATE TABLE Class(
     Class_id integer unique PRIMARY KEY,
     Teacher Text not null
 );
+SELECT * From Example;
+SELECT * From Class;
