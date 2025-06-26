@@ -11,5 +11,7 @@ CREATE TABLE Class(
     Class_id integer unique PRIMARY KEY,
     Teacher Text not null
 );
-SELECT * From Example;
-SELECT * From Class;
+SELECT e.Student_Name, e.Student_Id, e.Class, c.teacher, c.class_id, e.marks
+from Example e, Class c
+Where e.class_id=c.class_id or( marks between 50 and 70 and Student_Name like "R%")
+Order by c.class_id;
