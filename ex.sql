@@ -17,3 +17,15 @@ Where e.class_id=c.class_id or( marks between 50 and 70 and Student_Name like "R
 GROUP BY e.Student_id
 HAVING SUM(e.marks)<100 and AVG(e.marks)<100
 Order by c.class_id;
+
+Select e.Student_Name, e.Student_Id, e.Class, c.teacher, c.class_id, e.marks
+from Example e
+LEFT JOIN Class c on e.class_id=c.class_id;
+
+Select e.Student_Name, e.Student_Id, e.Class, c.teacher, c.class_id, e.marks
+From Example e
+RIGHT JOIN Class c on e.class_id=c.class_id;
+
+Select e.Student_Name, e.Student_Id, e.Class, c.teacher, c.class_id, e.marks
+From Example e
+Full JOIN Class c on e.class_id=c.class_id;
