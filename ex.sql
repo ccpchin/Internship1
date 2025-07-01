@@ -29,3 +29,24 @@ RIGHT JOIN Class c on e.class_id=c.class_id;
 Select e.Student_Name, e.Student_Id, e.Class, c.teacher, c.class_id, e.marks
 From Example e
 Full JOIN Class c on e.class_id=c.class_id;
+
+Select Student_Name,Student_id
+From Example
+Where Class_id = (
+    Select Class_name
+    From Class
+    Where Teacher="Bibi");
+
+Select Student_Name,Student_id
+From Example
+Where Class_id in (
+    Select Class_Name
+    From Class
+    Where Teacher="Bibi");
+
+Select e.Student_Name,e.Student
+From Example e
+Where e.class_id exists(
+    Select c.class_name
+    From class
+    where teacher="Bibi");
