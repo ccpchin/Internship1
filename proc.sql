@@ -7,3 +7,4 @@ Select Student_Name,Marks
 From Example
 Where Student_Id=pr_sid and Marks>=minmarks;
 End $$
+Call proced(1,7);
